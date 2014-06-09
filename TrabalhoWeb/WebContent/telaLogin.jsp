@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="http://localhost:8080/TrabalhoWeb/telaLogin.jsp">Tela login</a>
+	<form action="CrudPessoa" method="post">
+		Login: <input type="text" name="login">
+		<br>
+		<br>
+		Senha: <input type="password" name="senha">
+		<input type="submit" value="Entrar">
+	</form>
 </body>
 </html>
