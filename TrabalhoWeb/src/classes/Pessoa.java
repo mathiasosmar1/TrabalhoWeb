@@ -22,22 +22,15 @@ public class Pessoa {
 	String nu_telefone;
 	String nu_celular;
 	String de_endereco;
-	String login;
 	String senha;
 	String rg;
-	String email;
+	String email_login;
 	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
-	}
-	public String getLogin() {
-		return login;
-	}
-	public void setLogin(String login) {
-		this.login = login;
 	}
 	public String getSenha() {
 		return senha;
@@ -89,9 +82,9 @@ public class Pessoa {
 		this.rg = rg;
 	}
 	public String getEmail() {
-		return email;
+		return email_login;
 	}
 	public void setEmail(String email) {
-		this.email = email;
+		this.email_login = email;
 	}
 }

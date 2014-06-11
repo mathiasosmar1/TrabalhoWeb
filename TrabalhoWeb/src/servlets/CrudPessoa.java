@@ -21,7 +21,6 @@ public class CrudPessoa extends HttpServlet {
 		pessoa.setCpf("d");
 		pessoa.setDe_endereco("ef");
 		pessoa.setEmail("wefw");
-		pessoa.setLogin("efwe");
 		pessoa.setNome("wfewf");
 		pessoa.setNu_telefone("wefwef");
 		pessoa.setNu_celular("ewfwef");
