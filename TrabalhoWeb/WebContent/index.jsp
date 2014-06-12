@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Floricultura Cheiro de Cu</title>
+<title>Floricultura Cheiro Flor</title>
 </head>
 <body>
 	Leo cu de rola
