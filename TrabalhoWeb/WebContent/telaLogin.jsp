@@ -8,12 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="CrudPessoa" method="post">
-	<%String a = "Bola"; 
-	 ValidaPessoa vp; %>
-	
-		Login: <input type="text" name="login" > <%=a%> 
-		<%a = vp.validaLogin("<") %>
+	<form action="LoginUser" method="post">
+		Login: <input type="text" name="login" >
 		<br>
 		<br>
 		Senha: <input type="password" name="senha">

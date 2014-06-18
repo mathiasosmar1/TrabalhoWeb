@@ -17,21 +17,18 @@ public class CrudPessoa extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Pessoa pessoa = new Pessoa();
-		pessoa.setCpf("d");
-		pessoa.setDe_endereco("ef");
-		pessoa.setEmail("wefw");
-		pessoa.setNome("wfewf");
-		pessoa.setNu_telefone("wefwef");
-		pessoa.setNu_celular("ewfwef");
-		pessoa.setRg("ewwfwfw");
-		pessoa.setSenha("efwkjfwj");
-		pessoa.setSexo("ewfkewf");
-			
-		PessoaDao pd = new PessoaDao();
-		pd.inserir(pessoa);
-	
-		response.sendRedirect("index.jsp");
-	}
-
+			Pessoa pessoa = new Pessoa();
+			pessoa.setCpf(request.getParameter("cpf"));
+			pessoa.setDe_endereco(request.getParameter("endereco"));
+			pessoa.setEmail(request.getParameter("email"));
+			pessoa.setNome(request.getParameter("nome"));
+			pessoa.setNu_telefone(request.getParameter("telefone"));
+			pessoa.setNu_celular(request.getParameter("celular"));
+			pessoa.setRg(request.getParameter("rg"));
+			pessoa.setSenha(request.getParameter("senha"));
+			pessoa.setSexo(request.getParameter("sexo"));
+			PessoaDao pd = new PessoaDao();
+			pd.inserir(pessoa);
+			response.sendRedirect("telaLogin.jsp");
+}
 }
