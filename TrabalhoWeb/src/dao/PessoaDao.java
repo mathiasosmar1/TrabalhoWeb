@@ -26,15 +26,16 @@ public class PessoaDao {
 		}
 	}
 
-	public String retornarSenha(String usuario){
+	public boolean retornarSenha(String usuario, String senha){
 		try{
-			Query q = em.createQuery("from Pessoa as p where p.email_login = :login");
+			Query q = em.createQuery("from Pessoa as p where p.email_login = :login and p.senha = :senha");
 			q.setParameter("login", usuario);
-			if (q.getResultList().size() <= 0 )
-				return null;
-			Pessoa pessoa = (Pessoa) q.getSingleResult();
-			String senha = pessoa.getSenha();
-			return senha;
+			q.setParameter("senha", senha);
+			
+			if (q.getResultList().size() > 0){
+				return true;
+			}
+			return false;
 		}finally{
 			em.close();
 		}

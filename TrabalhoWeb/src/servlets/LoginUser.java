@@ -20,9 +20,8 @@ public class LoginUser extends HttpServlet {
 		PessoaDao pd = new PessoaDao();
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
-		String senhaBanco = pd.retornarSenha(login);
 		HttpSession session = request.getSession();
-		if (senha.equals(senhaBanco) && senhaBanco != null){
+		if (pd.retornarSenha(login, senha)){
 			session.setAttribute("user_logged", "true");
 		}else{
 			session.setAttribute("user_logged", null);
