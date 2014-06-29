@@ -21,12 +21,14 @@ public class LoginUser extends HttpServlet {
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
 		HttpSession session = request.getSession();
+		RequestDispatcher rd;
 		if (pd.retornarSenha(login, senha)){
 			session.setAttribute("user_logged", "true");
+			rd = request.getRequestDispatcher("logado/index.jsp");
 		}else{
 			session.setAttribute("user_logged", null);
+			rd = request.getRequestDispatcher("mathiasTeste.jsp");
 		}
-		RequestDispatcher rd = request.getRequestDispatcher("/mathiasTeste.jsp");
 		rd.forward(request, response);
 	}
 

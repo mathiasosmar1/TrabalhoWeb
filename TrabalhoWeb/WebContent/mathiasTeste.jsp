@@ -10,7 +10,8 @@
 	<a href="telaLogin.jsp">Tela login</a>
 	<br>
 	<a href="cadastroClienteTeste.jsp">Cadastro de cliente</a>
-	
+	<br>
+	<a href="logado/index.jsp">Index Logado</a>
 	<%String a = "";
 		if (session.getAttribute("user_logged") != null) {
 			if (session.getAttribute("user_logged").equals("true")) {
